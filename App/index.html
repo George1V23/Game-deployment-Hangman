@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="George Vidinei">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hangman Game</title>
+
+    <link rel="icon" href="img/gallow_death_warrant.ico">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="js/script.js"></script>
+</head>
+
+<body>
+    <h1>Hangman</h1>
+    <p>Discover the hidden word by pressing a letter key.</p>
+
+    <div id="wrongLettersContainer"></div>
+    <div id="wordContainer"></div>
+
+    <svg width="100%" height="500">
+        <!--ground-->
+        <line class="ground" x1="0" y1="100%" x2="100%" y2="100%"/>
+        <!--gallow-->
+        <line class="gallow" x1="80%" y1="0" x2="80%" y2="100%"/>
+        <line class="gallow" x1="80%" y1="0" x2="59%" y2="0"/>
+        <line class="gallow" x1="80%" y1="20%" x2="75%" y2="0"/>
+        <!--rope-->
+        <line class="rope" x1="60%" y1="0" x2="60%" y2="25%"/>
+
+        <!--head-->
+        <circle class="head" cx="60%" cy="30%" r="3%"/>
+        <!--torso-->
+        <line class="body" x1="60%" y1="30%" x2="60%" y2="60%"/>
+        <!--arms-->
+        <line class="body" x1="60%" y1="40%" x2="63%" y2="50%"/>
+        <line class="body" x1="60%" y1="40%" x2="57%" y2="50%"/>
+        <!--legs-->
+        <line class="body" x1="60%" y1="60%" x2="63%" y2="70%"/>
+        <line class="body" x1="60%" y1="60%" x2="57%" y2="70%"/>
+    </svg>
+
+    <button>Play</button>
+
+    <!-- <div class="notification">
+        <p>You have already entered this letter!</p>
+    </div> -->
+
+    <div class="end_div"></div>
+</body>
+
+</html>

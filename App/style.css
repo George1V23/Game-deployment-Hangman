@@ -1,0 +1,151 @@
+/* * { 
+    text-align: center;
+} */
+
+html, body {
+    background: #21435a;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    border: 0;
+    overflow: hidden; /*  disable scrollbars */
+    display: block;  /* no floating content on sides */
+}
+
+h1 {
+    color: #580d0d;
+    margin-left: 10%;
+    font-size: 50px;
+}
+
+p {
+    color: #ffffff;
+    font-size: 25px;
+    margin-left: 5%;    
+}
+
+svg {
+    position: relative;
+}
+
+button {
+    position: fixed;
+    display: block;
+}
+
+.ground {
+    stroke: #302e11;
+    stroke-width: 25px;
+    z-index: 2;
+}
+.gallow {
+    stroke: #000000;
+    stroke-width: 10px;
+    z-index: 1;
+}
+.rope {
+    stroke: #312e02;
+    stroke-width: 3px;
+}
+
+.head {
+    fill: #dbaa73;
+    stroke: #000000; 
+    stroke-width: 1;
+    display: none; 
+}
+.body {
+    stroke: #dbaa73;
+    stroke-width: 5;
+    stroke-linecap: round;
+    display: none;
+}
+
+.container {
+    position: fixed;
+    box-shadow: inset 0 0 0 5px #add;
+}
+
+#wrongLettersContainer #wordConainer {
+    position: fixed;
+    /* display: flex; */
+    background: rgba(100,100,100,0);
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+}
+
+.end_div {
+    width: 100%;
+    height: 100%;
+    background-color: #0f0f08;
+}
+
+.letter{
+    border-bottom: 3px solid #570000;
+    display: inline-flex;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3px;
+    height: 50px;
+    width: 20px;
+}
+
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    /* -webkit-animation: fadeIn 1s; */
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+/* @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+} */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+/* @-moz-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+} */
