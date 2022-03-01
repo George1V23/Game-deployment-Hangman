@@ -1,23 +1,28 @@
+# Simple deployment used to deploy and manage the app in george1v23/webapp:1.0
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web-app-deploy
+  name: webapp-deploy
+  labels:
+    app: webapp-pod
 spec:
+  replicas: 3
   selector:
     matchLabels:
-      app: web-app
-  replicas: 3
+      app: webapp
   template:
     metadata:
       labels:
-        app: web-app
+        app: webapp
     spec:
       containers:
-      - name: web-app
-        image: george1v23/web-app:1.0
+      - name: webapp-pod
+        image: george1v23/webapp:1.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
         resources:
           limits:
             memory: "128Mi"
             cpu: "500m"
-        ports:
-        - containerPort: 8080
+          

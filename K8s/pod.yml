@@ -1,0 +1,17 @@
+
+# Simple Kubernetes Pod to deploy the app contained in george1v23/webapp:1.0
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp
+spec:
+  containers:
+  - name: webapp-container
+    image: george1v23/webapp:1.0
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 5000
+        protocol: TCP
