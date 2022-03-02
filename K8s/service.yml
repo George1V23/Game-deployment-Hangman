@@ -1,0 +1,14 @@
+# Service to attach static IP address to each pod of app from george1v23/webapp:1.0 image
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapp-service
+spec:
+  selector:
+    app: webapp-pod
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 30000
