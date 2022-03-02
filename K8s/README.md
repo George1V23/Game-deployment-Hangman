@@ -65,11 +65,3 @@ After creating the deployment replicas pods over containers of my web applicatio
 `minikube ip` -> gets the ip
 
 `http://192.168.49.2:30000/` -> address to connect to web-app
-
-## [Namespace](/K8s/namespace.yml)
-
-Namespace use to group resources of my app.
-
-## [Ingress](/K8s/ingress.yml)
-
-Ingress to set-up the Domain Name with secure connection (https) for the application to access it with.
