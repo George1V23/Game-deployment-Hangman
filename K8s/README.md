@@ -65,3 +65,5 @@ After creating the deployment replicas pods over containers of my web applicatio
 `minikube ip` -> gets the ip
 
 `http://192.168.49.2:30000/` -> address to connect to web-app
+
+![Web-app image](/K8s/webapp_game.png)
