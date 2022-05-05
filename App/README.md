@@ -1,4 +1,4 @@
-# Wepage game
+# Web-page game
 
 Web browser game made with HTML, CSS, JavaScript to learn basics of making a webpage without using any runtime-enviromnent or library.
 
